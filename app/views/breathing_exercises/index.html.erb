@@ -1,0 +1,74 @@
+<% content_for :title, "Stress Management - Breathing Exercise" %>
+
+<main class="breathing-container" 
+      data-controller="breathing-exercise" 
+      data-breathing-exercise-default-inhale-value="4" 
+      data-breathing-exercise-default-exhale-value="6" 
+      data-breathing-exercise-min-duration-value="2" 
+      data-breathing-exercise-max-duration-value="10">
+  
+  <!-- Header Section -->
+  <section class="breathing-header" aria-labelledby="breathing-title">
+    <h1 id="breathing-title" class="breathing-header__title">
+      🧙‍♂️ Wizard Breathing School!
+    </h1>
+    <p class="breathing-header__subtitle">
+      Did you know breathing makes the stress go away? ✨
+    </p>
+  </section>
+
+  <!-- Breathing Interface -->
+  <section class="breathing-interface" aria-label="Breathing exercise interface">
+    <div class="breathing-circle" data-breathing-exercise-target="circle"></div>
+    
+    <div class="breathing-instructions">
+      <div class="breathing-instruction" 
+           data-breathing-exercise-target="instruction" 
+           aria-live="polite">
+        Ready to learn magical breathing spells! ✨
+      </div>
+      <div class="breathing-timer" 
+           data-breathing-exercise-target="timer" 
+           aria-label="Session timer">
+        00:00
+      </div>
+    </div>
+  </section>
+
+  <!-- Control Panel -->
+  <section class="breathing-controls" aria-label="Breathing exercise controls">
+    <button type="button" 
+            data-action="click->breathing-exercise#start" 
+            data-breathing-exercise-target="startButton"
+            class="btn btn--primary"
+            aria-label="Start breathing exercise">
+      <span class="btn__icon">▶</span>
+      <span class="btn__text">Start</span>
+    </button>
+    
+    <button type="button" 
+            data-action="click->breathing-exercise#stop" 
+            data-breathing-exercise-target="stopButton"
+            class="btn btn--stop"
+            aria-label="Stop breathing exercise">
+      <span class="btn__icon">⏹</span>
+      <span class="btn__text">Stop</span>
+    </button>
+  </section>
+
+  <!-- Information Section -->
+  <section class="breathing-info" aria-labelledby="benefits-title">
+    <h2 id="benefits-title" class="breathing-info__title">
+      🎯 Why Wizard Breathing is Magical! 🎯
+    </h2>
+    <ul class="benefits-list">
+      <li class="benefits-list__item">🧘‍♀️ Makes you feel calm and happy like a peaceful ninja!</li>
+      <li class="benefits-list__item">🧠 Helps your brain focus like a laser beam!</li>
+      <li class="benefits-list__item">💪 Makes your heart strong and healthy!</li>
+      <li class="benefits-list__item">😴 Helps you sleep like a cozy bear!</li>
+      <li class="benefits-list__item">😊 Helps you control your emotions like a wise wizard!</li>
+    </ul>
+  </section>
+
+
+</main> 
